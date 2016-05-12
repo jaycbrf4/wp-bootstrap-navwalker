@@ -99,6 +99,8 @@ Creating a Mega-Menu type nav
 Add the class **.mega-parent** to the top level link
 
 Sample CSS:
+
+
 	/* -=-=-=-=-=- DROPDOWNS -=-=-=-=-=-=- */
 	.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
 	    background-color: transparent;
