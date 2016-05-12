@@ -58,9 +58,14 @@ function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 	$item_output .= '<a'. $attributes .'>';
 	$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 			
+			// add support for menu item title
+			if (strlen($item->attr_title)>2) {
+	      		$item_output .= '<h3 class="tit">' . $item->attr_title . '</h3>';}
+
+
 			// add support for menu item descriptions
 			if (strlen($item->description)>2) {
-	      		$item_output .= '<br /><span class="sub">' . $item->description . '</span>';}
+	      		$item_output .= '<span class="sub">' . $item->description . '</span>';}
 
 	$item_output .= (($depth == 0 || 1) && $args->has_children) ? ' <b class="caret"></b></a>' : '</a>';
 	$item_output .= $args->after;
