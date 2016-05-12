@@ -88,8 +88,105 @@ Displaying the Menu
 -------------------
 To display the menu you must associate your menu with your theme location. You can do this by selecting your theme location in the *Theme Locations* list wile editing a menu in the WordPress menu manager.
 
-Displaying the Descriptions 
+Displaying the Titles and Descriptions 
 -------------------
-To display the menu item descriptions you need to click the tab **Screen Options** at the top of the screen and check "Descriptions".
+To display the menu item descriptions you need to click the tab **Screen Options** at the top of the screen and check "Title Attribute" and "Descriptions".
 
 You have the ability to use HTML in the description field of your menu item but be careful not to break the menu.
+
+Creating a Mega-Menu type nav
+-------------------
+Add the class **.mega-parent** to the top level link
+
+Sample CSS:
+	/* -=-=-=-=-=- DROPDOWNS -=-=-=-=-=-=- */
+	.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+	    background-color: transparent;
+	    color: #fff;
+	    text-decoration: none;
+	    border-bottom-left-radius: 16px;
+	}
+	
+	.dropdown-menu > li > a {
+	     padding: 8px 20px;
+	     color: #fff;
+	     }
+	.dropdown-menu > li:hover {
+	    background: #00b0f0;
+	}
+	.dropdown-menu > li:first-child{
+	    border-bottom-left-radius: 16px;
+	}
+	.dropdown-menu  li:last-child {
+	    border-bottom-right-radius: 16px;
+	}
+	.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+	    background-color: #5cb85c;
+	    color: #fff; 
+	    outline: 0 none;
+	    text-decoration: none;
+	}
+	
+	.dropdown-menu {
+	    background-clip: padding-box;
+	    background-color: rgba(0, 0, 0, 0.66);
+	    border: 1px solid rgba(0, 0, 0, 1);
+	    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+	    float: left;
+	    font-size: 14px;
+	    list-style: outside none none;
+	    min-width: 160px;
+	    padding:  0;
+	    position: absolute;
+	    text-align: left;
+	    top: 100%;
+	    z-index: 1000;
+	    border-bottom-right-radius: 16px;
+	    border-bottom-left-radius: 16px;
+	}
+	
+	/* Mega menu styles */
+	.mega-parent .dropdown-menu > li > a{
+	     white-space: normal ;
+	  }
+	
+	.navbar-nav, .navbar .collapse, .navbar-nav li {
+	    position: static;
+	}
+	.navbar .container {
+	    position: relative;
+	}
+	.navbar .dropdown-menu {
+	    left: auto;
+	}
+	.mega-parent, .mega-parent .dropdown-menu {
+	    left: 0;
+	    right: 0;
+	}
+	.navbar .container {
+	    max-width: 1170px;
+	    width: auto;
+	}
+	
+	.sub img {
+	    margin: 0 18px 12px 0;
+	}
+	 li.mega-parent ul li a {
+	  min-height: 300px;
+	  font-size: 24px; 
+	  font-weight: bolder;
+	}
+	 li.mega-parent ul li a span.sub {
+	  font-size: 14px; 
+	  font-weight: normal;
+	}
+	li.mega-parent ul li {
+	    float: left;
+	}
+	.tit {
+	  font-size: 18px;
+	    font-weight: bold;
+	    margin: 0;
+	    padding: 0;
+	}
+
