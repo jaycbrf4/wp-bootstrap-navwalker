@@ -2,7 +2,7 @@
  
 /**
 * Extended Walker class for use with the Twitter Bootstrap toolkit Dropdown menus in Wordpress.
-* Edited to support n-levels submenu and HTML Dewscription text.
+* Edited to support n-levels submenu and HTML Description text.
 * @author @jaycbrf4 https://github.com/jaycbrf4/wp-bootstrap-navwalker
 */
 class BootstrapNavMenuWalker extends Walker_Nav_Menu {
