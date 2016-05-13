@@ -108,12 +108,11 @@ Sample CSS:
 		    text-decoration: none;
 		    border-bottom-left-radius: 16px;
 		}
-		
 		.dropdown-menu  li > a {
 		     padding: 8px 20px;
 		     color: #fff;
 		     }
-		.dropdown-menu > li.menu-item {
+		.mega-parent ul.dropdown-menu {
 		    padding-bottom: 12px;
 		}
 		.dropdown-menu  li a:hover {
@@ -125,7 +124,6 @@ Sample CSS:
 		.dropdown-menu  li:last-child {
 		    border-bottom-right-radius: 16px;
 		}
-		
 		
 		.dropdown-menu {
 		    background-clip: padding-box;
@@ -196,7 +194,7 @@ Sample CSS:
 		    padding: 0;
 		}
 		@media (min-width: 768px) {
-		      /** make dropdown active on hover and fade in */
+		      /** make dropdown active on hover and fade in*/
 		      ul.nav li.dropdown > ul.dropdown-menu{
 		      visibility:hidden;
 		      display:block;
@@ -209,7 +207,7 @@ Sample CSS:
 		      opacity: 1;
 		      display: block;
 		      margin-top: 0;
-		      }
+		      } 
 		}
 		
 		@media (max-width: 767px) { 
@@ -226,7 +224,6 @@ Sample CSS:
 		    border-bottom-right-radius: 0;
 		}
 		     }
-
 
 
 Original work by johnmegahan https://gist.github.com/1597994, Emanuele 'Tex' Tessore https://gist.github.com/3765640
