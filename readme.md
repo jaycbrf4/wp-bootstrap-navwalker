@@ -229,4 +229,6 @@ Sample CSS:
 		    border-bottom-right-radius: 0;
 		}
      }
+     
+     Original work by johnmegahan https://gist.github.com/1597994, Emanuele 'Tex' Tessore https://gist.github.com/3765640
 
