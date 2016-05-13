@@ -2,8 +2,10 @@
  
 /**
 * Extended Walker class for use with the Twitter Bootstrap toolkit Dropdown menus in Wordpress.
-* Edited to support n-levels submenu and HTML Description text.
-* @author @jaycbrf4 https://github.com/jaycbrf4/wp-bootstrap-navwalker
+* Edited to support n-levels submenu and HTML Titles and Description text.
+* @author @jaycbrf4 https://github.com/jaycbrf4/wp-bootstrap-navwalker  
+*  Original work by johnmegahan https://gist.github.com/1597994, Emanuele 'Tex' Tessore https://gist.github.com/3765640
+* @license CC BY 4.0 https://creativecommons.org/licenses/by/4.0/
 */
 class BootstrapNavMenuWalker extends Walker_Nav_Menu {
  
@@ -61,7 +63,6 @@ function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 			// add support for menu item title
 			if (strlen($item->attr_title)>2) {
 	      		$item_output .= '<h3 class="tit">' . $item->attr_title . '</h3>';}
-
 
 			// add support for menu item descriptions
 			if (strlen($item->description)>2) {
