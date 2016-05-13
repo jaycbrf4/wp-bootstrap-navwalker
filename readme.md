@@ -90,7 +90,7 @@ To display the menu you must associate your menu with your theme location. You c
 
 Displaying the Titles and Descriptions 
 -------------------
-To display the menu item descriptions you need to click the tab **Screen Options** at the top of the screen and check "Title Attribute" and "Descriptions".
+To display the menu item descriptions you need to click the tab **Screen Options** at the top of the screen and check "Title Attribute" and "Descriptions". The title attribute is part of the menu ite's link. the description text is not inside the menu otem's link so you can add lists for additional links there.
 
 You have the ability to use HTML in the description field of your menu item but be careful not to break the menu.
 
@@ -109,25 +109,23 @@ Sample CSS:
 		    border-bottom-left-radius: 16px;
 		}
 		
-		.dropdown-menu > li > a {
+		.dropdown-menu  li > a {
 		     padding: 8px 20px;
 		     color: #fff;
 		     }
-		.dropdown-menu > li:hover {
-		    background: #00b0f0;
+		.dropdown-menu > li.menu-item {
+		    padding-bottom: 12px;
 		}
-		.dropdown-menu > li:first-child{
+		.dropdown-menu  li a:hover {
+		    color: #000;
+		}
+		.dropdown-menu  li:first-child{
 		    border-bottom-left-radius: 16px;
 		}
 		.dropdown-menu  li:last-child {
 		    border-bottom-right-radius: 16px;
 		}
-		.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
-		    background-color: #5cb85c;
-		    color: #fff; 
-		    outline: 0 none;
-		    text-decoration: none;
-		}
+		
 		
 		.dropdown-menu {
 		    background-clip: padding-box;
@@ -148,8 +146,9 @@ Sample CSS:
 		}
 		
 		/* Mega menu styles */
-		.mega-parent .dropdown-menu > li > a{
+		.mega-parent .dropdown-menu .sub {
 		     white-space: normal ;
+		     color: #fff;
 		  }
 		
 		.navbar-nav, .navbar .collapse, .navbar-nav li {
@@ -165,35 +164,31 @@ Sample CSS:
 		    left: 0;
 		    right: 0;
 		}
-		.mega-parent  li {
-		  min-height: 300px;
-		}
 		.navbar .container {
 		    max-width: 1170px;
 		    width: auto;
+		}
+		.sub > div {
+		    font-size: 12px;
+		    line-height: 19px;
+		    height: 100% !important;
 		}
 		.sublinks a {
 		  font-size: 12px !important;
 		  font-weight: normal  !important;
 		}
-		.sublinks a:hover {
-		  color: #999;
+		.dropdown-menu  li .sub a:hover {
+		    color: #f50000;
+		}
+		.sublinks {
+		    list-style-type: none;
+		    margin: 0;
+		    padding: 0;
 		}
 		.sub img {
 		    margin: 0 18px 12px 0;
 		}
-		 li.mega-parent ul li a {
-		  font-size: 24px; 
-		  font-weight: bolder;
-		  color: #FFF;
-		}
-		 li.mega-parent ul li a span.sub {
-		  font-size: 14px; 
-		  font-weight: normal;
-		}
-		li.mega-parent ul li {
-		    float: left;
-		}
+		
 		.tit {
 		  font-size: 18px;
 		    font-weight: bold;
@@ -206,12 +201,14 @@ Sample CSS:
 		      visibility:hidden;
 		      display:block;
 		      opacity:0;
-		      transition: opacity 0.5s ease-in-out;
+		      margin-top: 8px;
+		      transition: all 0.2s ease-in-out;
 		      }
 		      ul.nav li.dropdown:hover > ul.dropdown-menu{
 		      visibility:visible;
 		      opacity: 1;
 		      display: block;
+		      margin-top: 0;
 		      }
 		}
 		
@@ -228,7 +225,8 @@ Sample CSS:
 		.dropdown-menu  li:last-child {
 		    border-bottom-right-radius: 0;
 		}
-     }
+		     }
+
 
 
 Original work by johnmegahan https://gist.github.com/1597994, Emanuele 'Tex' Tessore https://gist.github.com/3765640
