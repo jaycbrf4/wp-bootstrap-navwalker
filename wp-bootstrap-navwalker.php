@@ -50,7 +50,7 @@ function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 	 
 	$output .= $indent . '<li' . $id . $value . $class_names . $li_attributes . '>';
 	 
-	$attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) .'"' : '';
+	//$attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) .'"' : '';
 	$attributes .= ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) .'"' : '';
 	$attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) .'"' : '';
 	$attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) .'"' : '';
@@ -66,7 +66,7 @@ function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 
 			// add support for menu item descriptions
 			if (strlen($item->description)>2) {
-	      		$item_output .= '<span class="sub">' . $item->description . '</span>';}
+	      		$item_output .= '</a> <span class="sub">' . $item->description . '</span>';}
 
 	$item_output .= (($depth == 0 || 1) && $args->has_children) ? ' <b class="caret"></b></a>' : '</a>';
 	$item_output .= $args->after;
