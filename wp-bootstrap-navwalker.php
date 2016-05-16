@@ -130,3 +130,10 @@ function cus_wp_setup_nav_menu_item($menu_item) {
                 $menu_item->description = apply_filters( 'nav_menu_description',  $menu_item->post_content );
                 return $menu_item;
 }
+
+//add a class to the actual link to hide the link's text when necessary 
+// to use add hidded to the link's Link Relationship (XFN)
+function add_menuclass($ulclass) {
+return preg_replace('/<a rel="hidden"/', '<a class="nolink"', $ulclass, 1);
+}
+add_filter('wp_nav_menu','add_menuclass');
