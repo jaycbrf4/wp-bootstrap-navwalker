@@ -3,7 +3,7 @@ wp-bootstrap-navwalker
 
 **A custom WordPress nav walker class to fully implement the Bootstrap 3.0+ navigation style in a custom theme using the WordPress built in menu manager.**
 
-This version adds the support for multi level dropdowns and HTML menu item titles and descriptions in the link
+This version adds the support for multi level dropdowns and HTML menu item titles and descriptions in the link as well as custom html elements inside the nav item.
 
 NOTE
 ----
@@ -249,6 +249,8 @@ Sample CSS:
 Hide a link's Navigation Label
 ----------------------------------
  To hide the link's text when necessary add "hidden" to the link's Link Relationship (XFN). This is usefull when you only want the HTML description to show and not the WordPress link's Navigation Label.
+
+
 
 
 Original work by johnmegahan https://gist.github.com/1597994, Emanuele 'Tex' Tessore https://gist.github.com/3765640
