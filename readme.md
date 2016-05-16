@@ -246,7 +246,9 @@ Sample CSS:
 		        .navbar-nav > li > a {border-right: none; margin-left: 10px;}
 		}
 
-** To hide the link's text when necessary add "hidden" to the link's Link Relationship (XFN). This is usefull when you only want the HTML description to show and not the WordPress link's Navigation Label.
+Hide a link's Navigation Label
+----------------------------------
+ To hide the link's text when necessary add "hidden" to the link's Link Relationship (XFN). This is usefull when you only want the HTML description to show and not the WordPress link's Navigation Label.
 
 
 Original work by johnmegahan https://gist.github.com/1597994, Emanuele 'Tex' Tessore https://gist.github.com/3765640
