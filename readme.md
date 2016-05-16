@@ -103,147 +103,152 @@ Sample CSS:
 
 		/* -=-=-=-=-=- DROPDOWNS -=-=-=-=-=-=- */
 		.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
-		    background-color: transparent;
-		    color: #fff;
-		    text-decoration: none;
-		    border-bottom-left-radius: 16px;
+		background-color: transparent;
+		color: #fff;
+		text-decoration: none;
+		border-bottom-left-radius: 16px;
 		}
 		.dropdown-menu  li > a {
-		     padding: 8px 0;
-		     color: #fff;
+		padding: 8px 20px;
+		color: #fff;
+		}
+		.mega-parent  li > a {
+		padding: 8px 0px;
+		color: #fff;
 		}
 		.mega-parent ul.dropdown-menu {
-		    padding-bottom: 12px;
+		padding-bottom: 12px;
 		}
 		.dropdown-menu  li a:hover {
-		    color: #000;
+		color: #000;
 		}
 		.dropdown-menu  li:first-child{
-		    border-bottom-left-radius: 16px;
+		border-bottom-left-radius: 16px;
 		}
 		.dropdown-menu  li:last-child {
-		    border-bottom-right-radius: 16px;
+		border-bottom-right-radius: 16px;
 		}
 		
 		.dropdown-menu {
-		    background-clip: padding-box;
-		    background-color: rgba(0, 0, 0, 0.66);
-		    border: 1px solid rgba(0, 0, 0, 1);
-		    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
-		    float: left;
-		    font-size: 14px;
-		    list-style: outside none none;
-		    min-width: 160px;
-		    padding:  0;
-		    position: absolute;
-		    text-align: left;
-		    top: 100%;
-		    z-index: 1000;
-		    border-bottom-right-radius: 16px;
-		    border-bottom-left-radius: 16px;
+		background-clip: padding-box;
+		background-color: rgba(0, 0, 0, 0.8);
+		border: 1px solid rgba(0, 0, 0, 1);
+		border-top: none;
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+		float: left;
+		font-size: 14px;
+		list-style: outside none none;
+		min-width: 160px;
+		padding:  0;
+		position: absolute;
+		text-align: left;
+		top: 100%;
+		z-index: 1000;
+		border-bottom-right-radius: 16px;
+		border-bottom-left-radius: 16px;
 		}
 		
 		/* Mega menu styles */
 		.mega-parent .dropdown-menu .sub {
-		     white-space: normal ;
-		     color: #fff;
-		  }
+		white-space: normal ;
+		color: #fff;
+		}
 		
 		.navbar-nav, .navbar .collapse, .navbar-nav li {
-		    position: static;
+		position: static;
 		}
 		.navbar .container {
-		    position: relative;
+		position: relative;
 		}
 		.navbar .dropdown-menu {
-		    left: auto;
+		left: auto;
 		}
 		.mega-parent, .mega-parent .dropdown-menu {
-		    left: 0;
-		    right: 0;
+		left: 0;
+		right: 0;
 		}
 		.navbar .container {
-		    max-width: 1170px;
-		    width: auto;
+		max-width: 1170px;
+		width: auto;
 		}
 		.sub > div {
-		    font-size: 12px;
-		    line-height: 19px;
-		    height: 100% !important;
+		font-size: 12px;
+		line-height: 19px;
+		height: 100% !important;
 		}
 		.sublinks a {
-		  font-size: 12px !important;
-		  font-weight: normal  !important;
-		  padding: 0 !important;
+		font-size: 12px !important;
+		font-weight: normal  !important;
+		padding: 0 !important;
 		}
 		.dropdown-menu  li .sub a:hover {
-		    color: #f50000;
+		color: #f50000;
 		}
 		.sublinks {
-		    list-style-type: none;
-		    margin: 0;
-		    padding: 0;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
 		}
 		.sublinks > li {
-		    margin-bottom: 6px;
+		margin-bottom: 6px;
 		}
 		.sub img {
-		    margin: 0 18px 12px 0;
+		margin: 0 18px 12px 0;
 		}
 		a.nolink {
-		  visibility: hidden !important;
+		visibility: hidden !important;
 		} 
 		.tit {
-		  font-size: 18px;
-		    font-weight: bold;
-		    margin: 0;
-		    padding: 0;
+		font-size: 18px;
+		font-weight: bold;
+		margin: 0;
+		padding: 0;
 		}
 		
 		.sub > form {
-		    background: #eee none repeat scroll 0 0;
-		    border-radius: 8px;
-		    color: #666;
-		    padding: 6px;
+		background: #eee none repeat scroll 0 0;
+		border-radius: 8px;
+		color: #666;
+		padding: 6px;
 		}
 		
 		
 		@media (min-width: 768px) {
-		      /** make dropdown active on hover and fade in*/
-		      ul.nav li.dropdown > ul.dropdown-menu{
-		      visibility:hidden;
-		      display:block;
-		      opacity:0;
-		      margin-top: 8px;
-		      transition: all 0.2s ease-in-out;
-		      }
-		      ul.nav li.dropdown:hover > ul.dropdown-menu{
-		      visibility:visible;
-		      opacity: 1;
-		      display: block;
-		      margin-top: 0;
-		      } 
+		/** make dropdown active on hover and fade in*/
+		ul.nav li.dropdown > ul.dropdown-menu{
+		visibility:hidden;
+		display:block;
+		opacity:0;
+		margin-top: 8px;
+		transition: all 0.2s ease-in-out;
+		}
+		ul.nav li.dropdown:hover > ul.dropdown-menu{
+		visibility:visible;
+		opacity: 1;
+		display: block;
+		margin-top: 0;
+		} 
 		}
 		
 		@media (max-width: 767px) { 
-		        .navbar-nav {
-		        background: rgba(0, 0, 0, 0.6);
-		        }
-		        #menu-main-nav li.mega-parent ul li {
-		        float: none;
-		        }
-		        .dropdown-menu > li:first-child{
-		        border-bottom-left-radius: 0;
-		        }
-		        .dropdown-menu  li:last-child {
-		        border-bottom-right-radius: 0;
-		        }
-		        .navbar-nav {
-		        margin: 13px -15px 0;
-		        width: auto;
-		        z-index: 1000;
-		        }
-		        .navbar-nav > li > a {border-right: none; margin-left: 10px;}
+		.navbar-nav {
+		background: rgba(0, 0, 0, 0.6);
+		}
+		#menu-main-nav li.mega-parent ul li {
+		float: none;
+		}
+		.dropdown-menu > li:first-child{
+		border-bottom-left-radius: 0;
+		}
+		.dropdown-menu  li:last-child {
+		border-bottom-right-radius: 0;
+		}
+		.navbar-nav {
+		margin: 13px -15px 0;
+		width: auto;
+		z-index: 1000;
+		}
+		.navbar-nav > li > a {border-right: none; margin-left: 10px;}
 		}
 
 Hide a link's Navigation Label
