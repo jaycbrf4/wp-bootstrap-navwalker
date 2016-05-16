@@ -109,9 +109,9 @@ Sample CSS:
 		    border-bottom-left-radius: 16px;
 		}
 		.dropdown-menu  li > a {
-		     padding: 8px 20px;
+		     padding: 8px 0;
 		     color: #fff;
-		     }
+		}
 		.mega-parent ul.dropdown-menu {
 		    padding-bottom: 12px;
 		}
@@ -174,6 +174,7 @@ Sample CSS:
 		.sublinks a {
 		  font-size: 12px !important;
 		  font-weight: normal  !important;
+		  padding: 0 !important;
 		}
 		.dropdown-menu  li .sub a:hover {
 		    color: #f50000;
@@ -183,16 +184,30 @@ Sample CSS:
 		    margin: 0;
 		    padding: 0;
 		}
+		.sublinks > li {
+		    margin-bottom: 6px;
+		}
 		.sub img {
 		    margin: 0 18px 12px 0;
 		}
-		
+		a.nolink {
+		  visibility: hidden !important;
+		} 
 		.tit {
 		  font-size: 18px;
 		    font-weight: bold;
 		    margin: 0;
 		    padding: 0;
 		}
+		
+		.sub > form {
+		    background: #eee none repeat scroll 0 0;
+		    border-radius: 8px;
+		    color: #666;
+		    padding: 6px;
+		}
+		
+		
 		@media (min-width: 768px) {
 		      /** make dropdown active on hover and fade in*/
 		      ul.nav li.dropdown > ul.dropdown-menu{
@@ -211,19 +226,27 @@ Sample CSS:
 		}
 		
 		@media (max-width: 767px) { 
-		      .navbar-nav {
+		        .navbar-nav {
 		        background: rgba(0, 0, 0, 0.6);
-		      }
-		      #menu-main-nav li.mega-parent ul li {
-		      float: none;
-		      }
-		      .dropdown-menu > li:first-child{
-		    border-bottom-left-radius: 0;
+		        }
+		        #menu-main-nav li.mega-parent ul li {
+		        float: none;
+		        }
+		        .dropdown-menu > li:first-child{
+		        border-bottom-left-radius: 0;
+		        }
+		        .dropdown-menu  li:last-child {
+		        border-bottom-right-radius: 0;
+		        }
+		        .navbar-nav {
+		        margin: 13px -15px 0;
+		        width: auto;
+		        z-index: 1000;
+		        }
+		        .navbar-nav > li > a {border-right: none; margin-left: 10px;}
 		}
-		.dropdown-menu  li:last-child {
-		    border-bottom-right-radius: 0;
-		}
-		     }
+
+** To hide the link's text when necessary add "hidden" to the link's Link Relationship (XFN)
 
 
 Original work by johnmegahan https://gist.github.com/1597994, Emanuele 'Tex' Tessore https://gist.github.com/3765640
