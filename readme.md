@@ -3,7 +3,7 @@ wp-bootstrap-navwalker
 
 **A custom WordPress nav walker class to fully implement the Bootstrap 3.0+ navigation style in a custom theme using the WordPress built in menu manager.**
 
-This version adds the support for multi level dropdowns and HTML menu item titles and descriptions in the link as well as custom html elements inside the nav item.
+This version adds the support for multi level dropdowns and HTML menu item titles and descriptions in the link as well as custom html elements inside the nav description.
 
 NOTE
 ----
