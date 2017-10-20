@@ -26,12 +26,12 @@ Update your `wp_nav_menu()` function in `header.php` to use the new walker by ad
 
 ```php
  <?php
-            $args = array(
-          'theme_location' => 'primary',
-          'depth' => 0,
-          'container' => 'false',
-          'menu_class'  => 'nav navbar-nav',
-          'walker'  => new BootstrapNavMenuWalker()
+          $args = array(
+		  'theme_location' => 'primary',
+		  'depth' => 0,
+		  'container' => '',
+		  'menu_class'  => 'nav navbar-nav',
+		  'walker'  => new BootstrapNavMenuWalker()
           );
     wp_nav_menu($args);
         ?>
@@ -68,7 +68,7 @@ Typically the menu is wrapped with additional markup, here is an example of a ` 
   <?php $args = array(
           'theme_location' => 'primary',
           'depth' => 0,
-          'container' => 'false',
+          'container' => '',
           'menu_class'  => 'nav navbar-nav',
           'walker'  => new BootstrapNavMenuWalker()
           );
