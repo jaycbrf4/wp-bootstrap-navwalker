@@ -46,7 +46,7 @@ function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 	 
 	$output .= $indent . '<li' . $id . $value . $class_names . $li_attributes . '>';
 	 
-	//$attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) .'"' : '';
+	$attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) .'"' : '';
 	$attributes .= ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) .'"' : '';
 	$attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) .'"' : '';
 	$attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) .'"' : '';
@@ -118,7 +118,7 @@ function display_element( $element, &$children_elements, $max_depth, $depth=0, $
 	}
 }
 
-// enables the use of html in the description
+// enables the use of html in the description - but does add a small security risk
 remove_filter('nav_menu_description', 'strip_tags');
 add_filter( 'wp_setup_nav_menu_item', 'cus_wp_setup_nav_menu_item' );
 function cus_wp_setup_nav_menu_item($menu_item) {
